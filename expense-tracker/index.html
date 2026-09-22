@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Expense Tracker</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<div class="app">
+<header><h1><span class="dot"></span> Expense Tracker</h1><button class="theme-toggle" id="themeToggle">🌙 / ☀️</button></header>
+<div class="summary"><div class="stat balance"><div class="label">Balance</div><div class="value" id="statBalance">₹0</div></div><div class="stat income"><div class="label">Total Income</div><div class="value" id="statIncome">₹0</div></div><div class="stat expense"><div class="label">Total Expense</div><div class="value" id="statExpense">₹0</div></div></div>
+<div class="card"><h2>Add Transaction</h2><form id="txForm"><input type="text" id="desc" placeholder="Description" required class="full"><input type="number" id="amount" placeholder="Amount" min="0" step="0.01" required><select id="category"><option>Food</option><option>Transport</option><option>Shopping</option><option>Bills</option><option>Entertainment</option><option>Health</option><option>Salary</option><option>Other</option></select><input type="date" id="date" required><div class="type-toggle" id="typeToggle"><button type="button" data-type="expense" class="active">Expense</button><button type="button" data-type="income">Income</button></div><button type="submit" class="add-btn full">Add Transaction</button></form></div>
+<div class="card"><h2>Spending by Category</h2><div class="bars" id="catBars"><div class="empty">No expenses yet</div></div></div>
+<div class="card"><h2>Transactions</h2><div class="filters"><select id="filterType"><option value="all">All Types</option><option value="income">Income</option><option value="expense">Expense</option></select><select id="filterCategory"><option value="all">All Categories</option></select><div class="spacer"></div><button class="clear-btn" id="clearAll">Clear All</button></div><div class="table-wrap"><table><thead><tr><th>Description</th><th>Category</th><th>Date</th><th style="text-align:right">Amount</th><th></th></tr></thead><tbody id="txBody"></tbody></table></div></div>
+</div><script src="js/app.js"></script>
+</body></html>
